@@ -237,7 +237,7 @@ def login(user):
         print(f"Login failed at step6 for {name}", {validate_authcode_result[1]})
         raise Exception(f"Login failed at step6 for {name}")
 
-    return apiKey + "-" + APP_TYPE + ":" + validate_authcode_result[1]
+    return validate_authcode_result[1]
 
 
 def handler(event, context):
