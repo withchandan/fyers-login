@@ -68,7 +68,7 @@ def sendLoginOtp(fyersId, appId):
     try:
         payload = {"fy_id": fyersId, "app_id": appId}
 
-        result_string = requests.post(url=URL_SEND_LOGIN_OTP, json=payload).json()
+        result_string = requests.post(url=URL_SEND_LOGIN_OTP, json=payload)
         if result_string.status_code != 200:
             return [ERROR, result_string.text]
 
